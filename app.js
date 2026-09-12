@@ -135,7 +135,7 @@ form.addEventListener("submit", (e)=>{
   const data = Object.fromEntries(new FormData(form).entries());
 
   const message = [
-    "✨ *SOLICITUD DE CITA — LÚMINA*",
+    "*SOLICITUD DE CITA — COSMEMISH*",
     "",
     `*Tratamiento:* ${selectedService.service}`,
     `*Duración:* ${selectedService.duration} min`,
@@ -145,12 +145,11 @@ form.addEventListener("submit", (e)=>{
     "*DATOS DE LA CLIENTA*",
     `*Nombre:* ${data.name}`,
     `*WhatsApp:* ${data.phone}`,
-    `*Correo:* ${data.email || "No proporcionado"}`,
     "",
     "*COMENTARIOS IMPORTANTES*",
     data.comments?.trim() || "No indicó alergias, padecimientos o comentarios adicionales.",
     "",
-    "La clienta solicita confirmar esta cita por WhatsApp."
+    `${data.name} solicita confirmar disponibilidad por WhatsApp.`
   ].join("\n");
 
   const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
