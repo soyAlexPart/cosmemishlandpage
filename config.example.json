@@ -1,0 +1,21 @@
+{
+  "business": {
+    "name": "LÚMINA",
+    "timezone": "America/Mexico_City",
+    "calendarId": "TU_CALENDAR_ID"
+  },
+  "services": [
+    {"id":"Glow profundo","duration":60,"price":0},
+    {"id":"Limpieza esencial","duration":45,"price":0},
+    {"id":"Ritual corporal","duration":75,"price":0}
+  ],
+  "hours": {
+    "monday": [["10:00","19:00"]],
+    "tuesday": [["10:00","19:00"]],
+    "wednesday": [["10:00","19:00"]],
+    "thursday": [["10:00","19:00"]],
+    "friday": [["10:00","19:00"]],
+    "saturday": [["10:00","15:00"]],
+    "sunday": []
+  }
+}

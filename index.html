@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Agenda tu tratamiento facial o corporal en nuestra cabina.">
+  <title>COSMEMISH — Ritual facial & corporal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="topline">· UN LUGAR PARA RELAJATE COMO TE MERECES ·</div>
+
+  <header class="nav">
+    <a class="brand" href="#">
+      <span class="brand-mark">CM</span>
+      <span><strong>COSMEMISH</strong><small>facial & body studio</small></span>
+    </a>
+    <a class="nav-cta" href="#agenda">Reservar mi cita <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">BELLEZA · PAUSA · CUIDADO</p>
+        <h1>La piel que quieres ver<br><em>cuando te mires al espejo</em></h1>
+        <p class="hero-text">Tratamientos pensados para cuidar tu piel y hacerte sentir increible</p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#agenda">Descubre el tratamiento para tu piel <span>↓</span></a>
+          <a class="text-btn" href="#ritual">Conoce el ritual</a>
+        </div>
+        <div class="micro-proof">
+          <span class="avatars"><i>✦</i><i>♡</i><i>✧</i></span>
+          <span><strong>Agenda sin llamadas.</strong><br>Elige tu horario en menos de 2 minutos.</span>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-label="Imagen decorativa de cuidado facial">
+        <div class="sun"></div>
+        <div class="portrait-card">
+          <div class="portrait-glow"></div>
+          <div class="portrait-face">
+            <span class="hair"></span><span class="face"></span><span class="neck"></span>
+            <span class="flower flower-a">✿</span><span class="flower flower-b">❀</span>
+          </div>
+          <div class="vertical-label">RITUAL DE PIEL</div>
+        </div>
+        <div class="floating-note"><span>01</span><strong>Respira.</strong><small>Lo demás puede esperar.</small></div>
+      </div>
+    </section>
+
+    <section class="services" id="ritual">
+      <div class="section-head">
+        <p class="eyebrow">ELIGE TU MOMENTO</p>
+        <h2>Rituales para sentirte bien<br><em>por dentro y por fuera.</em></h2>
+      </div>
+      <div class="service-grid">
+        <article class="service-card featured">
+          <span class="number">01</span>
+          <div><span class="service-tag">FACIAL</span><h3>Glow profundo</h3><p>Limpieza, exfoliación y cuidado personalizado para devolverle luminosidad a tu piel.</p></div>
+          <footer><span>60 min</span><strong>$___</strong></footer>
+        </article>
+        <article class="service-card">
+          <span class="number">02</span>
+          <div><span class="service-tag">FACIAL</span><h3>Limpieza esencial</h3><p>Un reset suave para retirar impurezas y dejar la piel fresca y equilibrada.</p></div>
+          <footer><span>45 min</span><strong>$___</strong></footer>
+        </article>
+        <article class="service-card">
+          <span class="number">03</span>
+          <div><span class="service-tag">CORPORAL</span><h3>Ritual corporal</h3><p>Exfoliación y masaje relajante para regalarle a tu cuerpo una pausa.</p></div>
+          <footer><span>75 min</span><strong>$___</strong></footer>
+        </article>
+      </div>
+    </section>
+
+    <section class="booking-wrap" id="agenda">
+      <div class="booking-intro">
+        <p class="eyebrow">RESERVA ONLINE</p>
+        <h2>Encuentra un horario<br><em>para consentirte</em></h2>
+        <div class="availability-note"><span class="live-dot"></span><div><strong>Disponibilidad en tiempo real</strong></div></div>
+      </div>
+
+      <div class="booking-card">
+        <div class="steps">
+          <span class="active"><b>01</b> Tratamiento</span>
+          <span><b>02</b> Horario</span>
+          <span><b>03</b> Tus datos</span>
+        </div>
+
+        <form id="bookingForm">
+          <div class="step-panel active" data-step="1">
+            <label>¿Qué quieres reservar?</label>
+            <div class="choice-grid">
+              <button type="button" class="choice selected" data-service="Glow profundo" data-duration="60" data-price="___">
+                <span>Facial</span><strong>Glow profundo</strong><small>60 min</small>
+              </button>
+              <button type="button" class="choice" data-service="Limpieza esencial" data-duration="45" data-price="___">
+                <span>Facial</span><strong>Limpieza esencial</strong><small>45 min</small>
+              </button>
+              <button type="button" class="choice" data-service="Ritual corporal" data-duration="75" data-price="___">
+                <span>Corporal</span><strong>Ritual corporal</strong><small>75 min</small>
+              </button>
+            </div>
+            <button class="continue primary-btn" type="button">Ver horarios <span>→</span></button>
+          </div>
+
+          <div class="step-panel" data-step="2">
+            <div class="booking-topline">
+              <div><label for="date">Elige el día</label><input id="date" name="date" type="date" required></div>
+              <button class="back-btn" type="button">← Cambiar tratamiento</button>
+            </div>
+            <div id="slots" class="slots"><div class="loading">Selecciona una fecha para consultar disponibilidad.</div></div>
+            <input id="selectedSlot" name="selectedSlot" type="hidden" required>
+            <button class="continue primary-btn" type="button" disabled>Continuar <span>→</span></button>
+          </div>
+
+          <div class="step-panel" data-step="3">
+            <div class="booking-summary" id="summary"></div>
+
+            <div class="field-grid">
+              <label>Nombre completo
+                <input name="name" autocomplete="name" required placeholder="Tu nombre">
+              </label>
+
+              <label>WhatsApp
+                <input name="phone" autocomplete="tel" inputmode="tel" required placeholder="55 0000 0000">
+              </label>
+
+              <label class="full">Correo electrónico <span class="optional">(opcional)</span>
+                <input name="email" type="email" autocomplete="email" placeholder="tu@email.com">
+              </label>
+
+              <label class="full health-field">
+                Comentarios importantes para tu tratamiento
+                <textarea name="comments" rows="5" placeholder="Cuéntanos si tienes alergias, sensibilidad de la piel, embarazo, algún padecimiento o cualquier otra condición que debamos conocer antes de realizar tu tratamiento."></textarea>
+                <small>Esta información será enviada únicamente como parte de tu solicitud de cita para que la especialista pueda revisarla antes de atenderte.</small>
+              </label>
+            </div>
+
+            <label class="consent">
+              <input type="checkbox" required>
+              Confirmo que la información proporcionada es correcta y autorizo que se utilice para preparar mi cita.
+            </label>
+
+            <button class="primary-btn submit-btn" type="submit">Enviar datos por WhatsApp <span>↗</span></button>
+            <p id="formMessage" class="form-message"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="trust">
+      <div><span>01</span><strong>Agenda cuando quieras</strong><small>Desde tu celular, sin llamadas.</small></div>
+      <div><span>02</span><strong>Horario realmente disponible</strong><small>Se valida contra el calendario.</small></div>
+      <div><span>03</span><strong>Tu cita queda registrada</strong><small>Recibes confirmación por correo.</small></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div><strong>COSMEMISH</strong><span>facial & body studio</span></div>
+    <span>© 2026 · Todos los derechos reservados</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
