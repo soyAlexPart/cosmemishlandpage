@@ -9,7 +9,7 @@
   incluyendo código de país y SIN +, espacios ni guiones.
   Ejemplo México: 524431234567
 */
-const WHATSAPP_NUMBER = "52XXXXXXXXXX";
+const WHATSAPP_NUMBER = "524661600980";
 
 const form = document.querySelector("#bookingForm");
 const panels = [...document.querySelectorAll(".step-panel")];
