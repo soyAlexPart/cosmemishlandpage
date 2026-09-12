@@ -1,14 +1,9 @@
-/*
-  LÚMINA — versión inicial de solicitud por WhatsApp
+history.scrollRestoration = "manual";
 
-  La página NO crea todavía una cita en Google Calendar.
-  Recopila los datos y abre WhatsApp con un mensaje prellenado.
+window.addEventListener("load", () => {
+    window.scrollTo(0, 0);
+});
 
-  IMPORTANTE:
-  Cambia WHATSAPP_NUMBER por el número de WhatsApp de la cabina,
-  incluyendo código de país y SIN +, espacios ni guiones.
-  Ejemplo México: 524431234567
-*/
 const WHATSAPP_NUMBER = "524661600980";
 
 const form = document.querySelector("#bookingForm");
@@ -39,7 +34,6 @@ function goToStep(step) {
         s.classList.toggle("active", i === step - 1)
     );
 
-    // Solo desplazar cuando se avance a otro paso
     if (step !== 1) {
         window.scrollTo({
             top: document.querySelector("#agenda").offsetTop - 20,
@@ -163,13 +157,22 @@ function escapeHtml(value){
 
 const topButton = document.getElementById("topButton");
 
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 400) {
-        topButton.classList.add("show");
-    } else {
-        topButton.classList.remove("show");
-    }
-});
+if (topButton) {
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 400) {
+            topButton.classList.add("show");
+        } else {
+            topButton.classList.remove("show");
+        }
+    });
+
+    topButton.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+}
 
 topButton.addEventListener("click", () => {
     window.scrollTo({
