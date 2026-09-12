@@ -749,8 +749,8 @@ textarea:focus {
     }
 
     .hero-img {
-        width: 75%;
-        max-width: 320px;
+        width: 65%;
+        max-width: 280px;
         margin: 0 auto;
     }
 }
