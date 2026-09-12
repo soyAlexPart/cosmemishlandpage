@@ -780,3 +780,48 @@ textarea:focus {
 .choice strong {
     color: #262126 !important;
 }
+
+/* ===== BOTÓN VOLVER ARRIBA ===== */
+
+#topButton {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: #262126;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    z-index: 9999;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease,
+                transform 0.3s ease,
+                visibility 0.3s ease;
+}
+
+#topButton.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#topButton:hover {
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    #topButton {
+        right: 18px;
+        bottom: 18px;
+        width: 46px;
+        height: 46px;
+        font-size: 22px;
+    }
+}

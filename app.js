@@ -158,3 +158,22 @@ function escapeHtml(value){
     "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
   }[char]));
 }
+
+// ===== BOTÓN VOLVER ARRIBA =====
+
+const topButton = document.getElementById("topButton");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 400) {
+        topButton.classList.add("show");
+    } else {
+        topButton.classList.remove("show");
+    }
+});
+
+topButton.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
