@@ -30,10 +30,22 @@ const today = new Date();
 today.setMinutes(today.getMinutes() - today.getTimezoneOffset());
 dateInput.min = today.toISOString().slice(0, 10);
 
-function goToStep(step){
-  panels.forEach(p => p.classList.toggle("active", Number(p.dataset.step) === step));
-  document.querySelectorAll(".steps span").forEach((s,i)=>s.classList.toggle("active", i === step-1));
-  window.scrollTo({top: document.querySelector("#agenda").offsetTop - 20, behavior:"smooth"});
+function goToStep(step) {
+    panels.forEach(p =>
+        p.classList.toggle("active", Number(p.dataset.step) === step)
+    );
+
+    document.querySelectorAll(".steps span").forEach((s, i) =>
+        s.classList.toggle("active", i === step - 1)
+    );
+
+    // Solo desplazar cuando se avance a otro paso
+    if (step !== 1) {
+        window.scrollTo({
+            top: document.querySelector("#agenda").offsetTop - 20,
+            behavior: "smooth"
+        });
+    }
 }
 
 choices.forEach(btn=>{
