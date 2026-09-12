@@ -1,7 +1,27 @@
-history.scrollRestoration = "manual";
+// ===== INICIO DE LA PÁGINA =====
 
-window.addEventListener("load", () => {
+if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+}
+
+function goToTopOnLoad() {
     window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+}
+
+// Al cargar
+window.addEventListener("load", () => {
+    goToTopOnLoad();
+
+    // Algunos navegadores móviles restauran la posición después de load
+    setTimeout(goToTopOnLoad, 100);
+    setTimeout(goToTopOnLoad, 500);
+});
+
+// También funciona cuando Safari/Chrome restaura la página desde caché
+window.addEventListener("pageshow", () => {
+    goToTopOnLoad();
 });
 
 const WHATSAPP_NUMBER = "524661600980";
@@ -155,28 +175,45 @@ function escapeHtml(value){
 
 // ===== BOTÓN VOLVER ARRIBA =====
 
-const topButton = document.getElementById("topButton");
+document.addEventListener("DOMContentLoaded", () => {
 
-if (topButton) {
-    window.addEventListener("scroll", () => {
+    const topButton = document.getElementById("topButton");
+
+    if (!topButton) return;
+
+    function updateTopButton() {
         if (window.scrollY > 400) {
             topButton.classList.add("show");
         } else {
             topButton.classList.remove("show");
         }
+    }
+
+    window.addEventListener("scroll", updateTopButton, {
+        passive: true
     });
 
     topButton.addEventListener("click", () => {
         window.scrollTo({
             top: 0,
+            left: 0,
+            behavior: "smooth"
+        });
+
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+    });
+
+    // Compatibilidad adicional con pantallas táctiles
+    topButton.addEventListener("touchend", (event) => {
+        event.preventDefault();
+
+        window.scrollTo({
+            top: 0,
+            left: 0,
             behavior: "smooth"
         });
     });
-}
 
-topButton.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
+    updateTopButton();
 });

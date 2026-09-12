@@ -781,47 +781,71 @@ textarea:focus {
     color: #262126 !important;
 }
 
-/* ===== BOTÓN VOLVER ARRIBA ===== */
+/* ================================
+   BOTÓN VOLVER ARRIBA
+   ================================ */
 
 #topButton {
-    position: fixed;
-    right: 24px;
-    bottom: 24px;
-    width: 50px;
-    height: 50px;
-    border: none;
-    border-radius: 50%;
-    background: #262126;
-    color: #fff;
-    font-size: 24px;
-    font-weight: 500;
-    cursor: pointer;
-    z-index: 9999;
+    position: fixed !important;
 
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: opacity 0.3s ease,
-                transform 0.3s ease,
-                visibility 0.3s ease;
+    right: 20px !important;
+    bottom: 20px !important;
+
+    width: 50px !important;
+    height: 50px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    border: none !important;
+    border-radius: 50% !important;
+
+    background: #262126 !important;
+    color: #ffffff !important;
+
+    font-family: Arial, sans-serif !important;
+    font-size: 24px !important;
+    font-weight: 400 !important;
+
+    cursor: pointer !important;
+
+    z-index: 999999 !important;
+
+    opacity: 0 !important;
+    visibility: hidden !important;
+
+    transform: translateY(15px) !important;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s ease !important;
+
+    /* Importante para teléfono */
+    touch-action: manipulation !important;
+    -webkit-tap-highlight-color: transparent !important;
 }
 
 #topButton.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
 }
 
-#topButton:hover {
-    transform: translateY(-3px);
-}
-
+/* TELÉFONO */
 @media (max-width: 768px) {
+
     #topButton {
-        right: 18px;
-        bottom: 18px;
-        width: 46px;
-        height: 46px;
-        font-size: 22px;
+        width: 48px !important;
+        height: 48px !important;
+
+        right: 18px !important;
+        bottom: 18px !important;
+
+        font-size: 22px !important;
     }
 }
