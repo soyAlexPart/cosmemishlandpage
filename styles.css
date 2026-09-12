@@ -755,7 +755,7 @@ textarea:focus {
     }
 }
 
-/* ===== AJUSTE FINAL DE IMAGEN EN MÓVIL ===== */
+/* ===== AJUSTE DE IMAGEN EN MÓVIL ===== */
 
 @media (max-width: 768px) {
     .hero-art {
@@ -774,4 +774,9 @@ textarea:focus {
         margin: 0 auto !important;
         object-fit: contain !important;
     }
+}
+
+/* Nombres de tratamientos en negro */
+.choice strong {
+    color: #262126 !important;
 }
