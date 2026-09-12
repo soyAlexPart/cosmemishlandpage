@@ -781,6 +781,16 @@ textarea:focus {
     color: #262126 !important;
 }
 
+/* Horarios - color negro */
+.time-slot,
+.time-slot span,
+.slot,
+.slot span,
+.time,
+.time span {
+    color: #262126 !important;
+}
+
 /* ================================
    BOTÓN VOLVER ARRIBA
    ================================ */
