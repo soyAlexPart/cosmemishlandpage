@@ -859,3 +859,9 @@ textarea:focus {
         font-size: 22px !important;
     }
 }
+
+/* Horarios de reserva en negro */
+.slot,
+.slot.selected {
+    color: #262126 !important;
+}
