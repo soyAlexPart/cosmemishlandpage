@@ -860,8 +860,6 @@ textarea:focus {
     }
 }
 
-/* Horarios de reserva en negro */
-.slot,
-.slot.selected {
+button.slot {
     color: #262126 !important;
 }
