@@ -863,3 +863,467 @@ textarea:focus {
 button.slot {
     color: #262126 !important;
 }
+
+/* ================================
+   CSS FAQ SECTION 
+   ================================ */
+
+   /* ==================== PREGUNTAS FRECUENTES ==================== */
+
+.faq {
+    padding: 100px 20px;
+    background: #faf8f6;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Encabezado */
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.faq-subtitle {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #b08b72;
+}
+
+.faq-header h2 {
+    margin: 0 0 15px;
+    font-size: 42px;
+    font-weight: 500;
+    color: #333;
+}
+
+.faq-header p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+}
+
+
+/* Lista */
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+/* Cada pregunta */
+
+.faq-item {
+    background: #ffffff;
+    border: 1px solid #eee5df;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: #d9c3b4;
+}
+
+
+/* Pregunta */
+
+.faq-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 22px 25px;
+
+    cursor: pointer;
+    list-style: none;
+
+    font-size: 17px;
+    font-weight: 500;
+    color: #3d3d3d;
+}
+
+
+/* Quitar flecha predeterminada */
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::marker {
+    display: none;
+}
+
+
+/* Icono + */
+
+.faq-icon {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    font-size: 22px;
+    font-weight: 300;
+
+    color: #b08b72;
+    background: #f8f1ed;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* Cambiar + por rotación cuando se abre */
+
+.faq-item[open] .faq-icon {
+    transform: rotate(45deg);
+}
+
+
+/* Respuesta */
+
+.faq-answer {
+    padding: 0 25px 22px;
+}
+
+.faq-answer p {
+    margin: 0;
+
+    font-size: 15px;
+    line-height: 1.8;
+
+    color: #777;
+}
+
+
+/* Animación visual al abrir */
+
+.faq-item[open] {
+    border-color: #d9c3b4;
+}
+
+
+/* CTA */
+
+.faq-cta {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.faq-cta p {
+    margin-bottom: 20px;
+    color: #777;
+    font-size: 15px;
+}
+
+.faq-button {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    background: #b08b72;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: all 0.3s ease;
+}
+
+.faq-button:hover {
+    background: #96735c;
+    transform: translateY(-2px);
+}
+
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 768px) {
+
+    .faq {
+        padding: 70px 20px;
+    }
+
+    .faq-header h2 {
+        font-size: 32px;
+    }
+
+    .faq-header p {
+        font-size: 15px;
+    }
+
+    .faq-item summary {
+        padding: 19px 18px;
+        font-size: 16px;
+    }
+
+    .faq-answer {
+        padding: 0 18px 20px;
+    }
+
+    .faq-answer p {
+        font-size: 14px;
+    }
+
+    .faq-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 20px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .faq {
+        padding: 60px 15px;
+    }
+
+    .faq-header {
+        margin-bottom: 35px;
+    }
+
+    .faq-header h2 {
+        font-size: 28px;
+    }
+
+    .faq-item summary {
+        gap: 10px;
+    }
+
+    .faq-button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* ================================
+   CSS ESPECIALISTA SECTION 
+   ================================ */
+
+   /* ==================== ESPECIALISTA ==================== */
+
+.especialista {
+    padding: 100px 20px;
+    background: #ffffff;
+}
+
+.especialista-container {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* Imagen */
+
+.especialista-imagen {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.especialista-imagen img {
+    display: block;
+
+    width: 100%;
+    height: 550px;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.especialista-imagen:hover img {
+    transform: scale(1.03);
+}
+
+
+/* Contenido */
+
+.especialista-contenido {
+    max-width: 500px;
+}
+
+.especialista-subtitulo {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: #b08b72;
+}
+
+.especialista-contenido h2 {
+    margin: 0 0 20px;
+
+    font-size: 40px;
+    line-height: 1.2;
+    font-weight: 500;
+
+    color: #333;
+}
+
+.especialista-contenido h3 {
+    margin: 0 0 20px;
+
+    font-size: 22px;
+    font-weight: 500;
+
+    color: #b08b72;
+}
+
+.especialista-contenido p {
+    margin: 0 0 18px;
+
+    font-size: 16px;
+    line-height: 1.8;
+
+    color: #777;
+}
+
+
+/* Información */
+
+.especialista-info {
+    display: flex;
+    gap: 40px;
+
+    margin: 30px 0;
+}
+
+.especialista-info div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.especialista-info strong {
+    font-size: 14px;
+    color: #444;
+}
+
+.especialista-info span {
+    font-size: 14px;
+    color: #888;
+}
+
+
+/* Botón */
+
+.especialista-button {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    background: #b08b72;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: all 0.3s ease;
+}
+
+.especialista-button:hover {
+    background: #96735c;
+    transform: translateY(-2px);
+}
+
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 768px) {
+
+    .especialista {
+        padding: 70px 20px;
+    }
+
+    .especialista-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .especialista-imagen {
+        max-width: 400px;
+    }
+
+    .especialista-imagen img {
+        height: 450px;
+    }
+
+    .especialista-contenido {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .especialista-contenido h2 {
+        font-size: 32px;
+    }
+
+    .especialista-info {
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .especialista {
+        padding: 60px 15px;
+    }
+
+    .especialista-imagen img {
+        height: 400px;
+    }
+
+    .especialista-contenido h2 {
+        font-size: 28px;
+    }
+
+    .especialista-info {
+        gap: 25px;
+    }
+
+    .especialista-button {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+}
